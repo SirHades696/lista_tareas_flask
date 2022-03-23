@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<title>{% block title%}{% endblock%} - ToDo List</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="{{ url_for('static', filename='/img/tasks16.png') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='/style/style.css') }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<header>
+    <h1 class="header">{% block header %}{% endblock %}</h1>
+</header>
+<nav class="men">
+    <ul class="menu">
+        <input type="checkbox" id="menuToggle">
+        <label for="menuToggle" class="menu-icon"><i class="fa fa-bars"></i></label>
+        <li class="item head"><a href="{{ url_for('index.index') }}">ToDo List App</a></li>
+        {% if g.user %}
+        <li class="item logout"><a href="{{ url_for('auth.logout') }}">Cerrar sesión</a></li>
+        <li class="item user"><a href="{{ url_for('todo.list')}}">{{ g.user['username'] }}</a></li>
+        {% else %}
+        <li class="item register"><a href="{{ url_for('auth.register') }}">Registrarse</a></li>
+        <li class="item login"><a href="{{ url_for('auth.login') }}">Iniciar sesión</a></li>
+        {% endif %}
+    </ul>
+</nav>
+<div class="content">
+    <span>Gestiona tus tareas.</span>
+    {% for message in get_flashed_messages() %}
+    <div class="flash"> {{ message }}</div>
+    {% endfor %}
+    {% block content %}{% endblock %}
+</div>

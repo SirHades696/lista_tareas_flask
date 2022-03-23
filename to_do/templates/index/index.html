@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% block title %}Bienvenido{% endblock %} a ToDo List App
+{% endblock %}
+
+{% block content %}
+<div class="clip">
+    <div class="note">
+      <a>
+        <h2 class="todo-title"><strike>Task #1</strike></h2>
+        <p>{{ date.strftime('%Y-%m-%d') }}</p>
+      </a>
+    </div>
+    <div class="note">
+      <a>
+        <h2 class="todo-title"><strike>Task #2</strike></h2>
+        <p>{{ date.strftime('%Y-%m-%d') }}</p>
+      </a>
+    </div>
+    <div class="note">
+      <a>
+        <h2 class="todo-title">Task #3</h2>
+        <p>{{ date.strftime('%Y-%m-%d') }}</p>
+      </a>
+    </div>
+    <div class="note">
+      <a>
+        <h2 class="todo-title"><strike>Task #4</strike></h2>
+        <p>{{ date.strftime('%Y-%m-%d') }}</p>
+      </a>
+    </div>
+    <div class="note">
+      <a>
+        <h2 class="todo-title"><strike>Task #5</strike></h2>
+        <p>{{ date.strftime('%Y-%m-%d') }}</p>
+      </a>
+    </div>
+    <div class="note">
+      <a>
+        <h2 class="todo-title">Task #6</h2>
+        <p>{{ date.strftime('%Y-%m-%d') }}</p>
+      </a>
+    </div>
+    <div class="note">
+      <a>
+        <h2 class="todo-title"><strike>Task #7</strike></h2>
+        <p>{{ date.strftime('%Y-%m-%d') }}</p>
+      </a>
+    </div>
+    <div class="note">
+      <a>
+        <h2 class="todo-title">Task #8</h2>
+        <p>{{ date.strftime('%Y-%m-%d') }}</p>
+      </a>
+    </div>
+    <div class="note">
+      <a>
+        <h2 class="todo-title"><strike>Task #9</strike></h2>
+        <p>{{ date.strftime('%Y-%m-%d') }}</p>
+      </a>
+    </div>
+    <div class="note">
+      <a>
+        <h2 class="todo-title">Task #10</h2>
+        <p>{{ date.strftime('%Y-%m-%d') }}</p>
+      </a>
+    </div>
+</div>
+{% endblock %}

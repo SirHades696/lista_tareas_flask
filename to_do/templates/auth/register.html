@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% block title %}Registrarse{% endblock %} en ToDo List App
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        <div class="box">
+        <label for="username">Username</label>
+        <input type="user" name="username" id="username" placeholder="Nombre de usuario..." required />
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Contraseña..." required />
+        <input type="submit" value="Registrarse"/>
+        </div>
+    </form>
+{% endblock %}
