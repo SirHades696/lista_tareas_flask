@@ -34,7 +34,7 @@ En caso de ser la primera vez en usar la aplicación es necesario ejecutar el co
 Este comando solo debe ser ejecutado la primera vez ya que de lo contrario cada que sea llamado realizará las acciones mencionadas con anterioridad.
 
 # ¿Qué Packages son necesarios?
-Todos los recursos usados para el desarrollo del bot se encuentran en: `requirements.txt`
+Todos los recursos usados para el desarrollo se encuentran en: `requirements.txt`
 > `pip install -r requirements.txt`
 
 # Interactuando con la aplicación web
